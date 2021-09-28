@@ -1,0 +1,25 @@
+.workBlock {
+    border: 1px solid;
+    width: 350px;
+
+}
+
+.imageWork {
+    background-color: #ccbc87;
+    width: 100%;
+    height: 285px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.workButton {
+    width: 100px;
+    height: 35px;
+    font-size: 15px;
+}
+
+.descriptionBlock {
+    margin: 0 25px;
+    border: 1px solid;
+}
