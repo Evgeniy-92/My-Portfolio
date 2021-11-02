@@ -4,8 +4,8 @@ import s from './Work.module.css'
 function Work(props) {
     return (
         <div className={s.workBlock}>
-            <div className={s.imageWork}>
-                <button className={s.workButton}>Смотреть</button>
+            <div className={s.imageContainer}>
+                <a className={s.workButton}>Смотреть</a>
             </div>
             <div className={s.descriptionBlock}>
                 <h3>{props.projectTitle}</h3>

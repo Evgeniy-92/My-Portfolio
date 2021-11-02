@@ -18,8 +18,4 @@
 
 }
 
-@media all and (max-width: 749px) {
-    .mainContainer {
-        justify-content: center;
-    }
-}
+
