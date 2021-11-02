@@ -1,6 +1,6 @@
 .worksBlock {
-    height: 100vh;
     background-color: #b9a2d4;
+    padding-bottom: 70px;
 }
 
 .title {
@@ -15,8 +15,13 @@
     flex-wrap: wrap;
 }
 
+@media all and (max-width: 880px) {
+    .works {
+        justify-content: center;
+    }
+}
+
 .worksContainer {
     justify-content: flex-start;
-    align-items: center;
     flex-direction: column;
 }

@@ -20,3 +20,9 @@
     width: 100%;
     flex-wrap: wrap;
 }
+
+@media all and (max-width: 624px) {
+    .skills {
+        justify-content: center;
+    }
+}

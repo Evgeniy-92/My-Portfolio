@@ -28,6 +28,13 @@
     width: 400px;
 }
 
+@media all and (max-width: 700px) {
+    .form {
+        width: 100%;
+    }
+}
+
+
 .sendBtn {
     width: 100px;
     height: 35px;

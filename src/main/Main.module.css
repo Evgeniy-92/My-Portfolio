@@ -13,3 +13,9 @@
     height: 400px;
     background-color: #e2c6c6;
 }
+
+@media all and (max-width: 749px) {
+    .mainContainer {
+        justify-content: center;
+    }
+}

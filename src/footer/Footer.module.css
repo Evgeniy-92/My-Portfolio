@@ -19,5 +19,15 @@
     justify-content: space-between;
     width: 560px;
     border: 1px solid;
+}
 
+@media all and (max-width: 887px) {
+    .elementsContainer {
+        width: 100%;
+        justify-content: space-around;
+    }
+    .element {
+        width: 60px;
+        height: 60px;
+    }
 }

@@ -1,7 +1,6 @@
 .workBlock {
     border: 1px solid;
     width: 350px;
-
 }
 
 .imageWork {
@@ -22,4 +21,8 @@
 .descriptionBlock {
     margin: 0 25px;
     border: 1px solid;
+}
+.descriptionBlock h3 {
+    margin: 0;
+    text-align: center;
 }
