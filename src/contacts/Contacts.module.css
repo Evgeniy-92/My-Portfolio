@@ -19,6 +19,7 @@
     width: 400px;
 }
 
+
 .itemForm:last-of-type {
     margin-top: 10px;
 }
@@ -29,6 +30,12 @@
     flex-direction: column;
     width: 400px;
     margin-bottom: 70px;
+}
+
+.form textarea {
+    resize: none;
+    width: 100%;
+    height: 100px;
 }
 
 @media all and (max-width: 700px) {

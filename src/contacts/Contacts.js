@@ -12,7 +12,7 @@ function Contacts() {
                 <form className={s.form} method="POST" target="_blank" id="data">
                     <input className={s.itemForm} placeholder={'input'} required/>
                     <input className={s.itemForm} placeholder={'input'} required/>
-                    <textarea className={s.itemForm} placeholder={'textarea'} required onresize={false}></textarea>
+                    <textarea className={s.itemForm} placeholder={'textarea'} required ></textarea>
                 </form>
                 <button className={s.sendBtn} form="data" type="submit">send</button>
 
