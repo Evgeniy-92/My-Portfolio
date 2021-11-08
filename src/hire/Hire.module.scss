@@ -1,0 +1,77 @@
+@import './../common/styles/sass/variables';
+
+.hireBlock {
+    padding: 70px 40px;
+    background-attachment: fixed;
+    background-position: 50% 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    &::before {
+        content: '';
+        background-color: rgba(0,0,0,.83);
+        position: absolute;
+        height: 100%;
+        left: 0;
+        top: 0;
+        width: 100%;
+    }
+    .containerHire {
+        display: grid;
+        grid-template-columns: 1fr 162px;
+        grid-template-rows: 1fr;
+        grid-template-areas: 'c b';
+        padding: 0 15px;
+        @media all and (max-width: 767px) {
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr 47px;
+            grid-gap: 26px;
+            grid-template-areas:
+                    'c'
+                    'b';
+        }
+        .content {
+            grid-area: c;
+            z-index: 1;
+            align-self: center;
+            margin-right: 50px;
+            @media all and (max-width: 767px) {
+                justify-self: center;
+                margin-right: 0;
+                text-align: center;
+            }
+            .hireTitle {
+                color: #f0f0f0;
+                font-weight: 700;
+                margin-bottom: 14px;
+                line-height: 1.2;
+                font-size: 40px;
+            }
+            .hireDescription {
+                color: #9f9f9f;
+                font-size: 15px;
+            }
+        }
+        .buttonBlock {
+            grid-area: b;
+            z-index: 1;
+            align-self: center;
+            @media all and (max-width: 767px) {
+                justify-self: center;
+            }
+            .button {
+                background-color: $primaryColor;
+                border: 1px solid $primaryColor;
+                padding: 12px 54px;
+                color: #fff;
+                text-decoration: none;
+                border-radius: 30px;
+                cursor: pointer;
+                @media all and (max-width: 767px) {
+                    padding: 10px 38px;
+
+                }
+            }
+        }
+    }
+}

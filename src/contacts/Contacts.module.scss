@@ -1,0 +1,92 @@
+@import '../common/styles/sass/variables';
+
+.contactsBlock {
+  background-color: $bgSecondColor;
+  padding: 85px 40px;
+
+  .contactsContainer {
+    //justify-content: flex-start;
+
+    .formContainer {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+
+      .form {
+        display: grid;
+        grid-template-rows: 41px 41px 128px 53px;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+                    "name email "
+                    "subject subject"
+                    "message message "
+                    "btn btn";
+        grid-gap: 15px;
+        width: 100%;
+        padding: 0 15px;
+        @media all and (max-width: 775px) {
+          grid-template-columns: 1fr;
+          grid-template-rows: 41px 41px 41px 128px 53px;
+          grid-template-areas:
+                    "name"
+                    "email"
+                    "subject"
+                    "message "
+                    "btn";
+        }
+
+        .contactsName {
+          grid-area: name;
+        }
+
+        .contactsEmail {
+          grid-area: email;
+        }
+
+        .contactsSubject {
+          grid-area: subject;
+        }
+
+        .contactsMessage {
+          grid-area: message;
+          resize: none;
+          font-family: $fontFamily;
+        }
+
+        .sendBtn {
+          grid-area: btn;
+          width: 156px;
+          padding: 10px 30px;
+          background-color: $primaryColor !important;
+          border: 1px solid $primaryColor !important;
+          border-radius: 30px;
+          color: #fff;
+          font-family: $fontFamily;
+          font-size: 14px;
+          margin-top: 10px;
+        }
+
+        .itemForm {
+          background-color: #fff;
+          border: none;
+          border-bottom: 1px solid #d4d4d4;
+          border-radius: 0;
+          font-size: 14px;
+          padding: 9px 14px;
+          -webkit-box-shadow: 0 0 0 1000px #fff inset;
+          -webkit-text-fill-color: #555 !important;
+          transition: background-color 5000s ease-in-out 0s;
+          outline: none;
+
+          &:focus {
+            border-bottom: 1px solid $primaryColor;
+            transition: all 0.4s ease 0s;
+          }
+        }
+      }
+    }
+
+  }
+
+}

@@ -1,22 +1,17 @@
+@import './../common/styles/sass/variables';
+
 .skillsBlock {
-    background-color: #bad5ac;
-    padding-bottom: 70px;
+    background-color: $bgSecondColor;
+    padding: 85px 40px;
 }
 
 .skillsContainer {
-    justify-content: flex-start;
-    align-items: center;
-    flex-direction: column;
-}
 
-.title {
-    background-color: #c4bdbd;
 }
 
 .skills {
     display: flex;
     justify-content: space-between;
-    border: 1px solid;
     width: 100%;
     flex-wrap: wrap;
 }

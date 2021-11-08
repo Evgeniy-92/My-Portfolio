@@ -1,26 +1,9 @@
 import React from "react";
 import s from './Nav.module.scss'
 import avatar from '../assets/images/profile-avatar.jpg'
-import {Link} from "react-scroll";
 
-function Nav(props) {
+function Nav2(props) {
     const activeMenu = props.status ? `${s.nav} ${s.active}` : s.nav
-
-    const items = ['about', 'skills', 'projects', 'contacts']
-    const element = items.map((item, index) => {
-        debugger
-       return <li className={s.item}>
-            <Link
-                key={index}
-                className={s.link}
-                activeClass={s.activeLink}
-                to={item}
-                spy={true}
-                smooth={true}
-                offset={10}
-                duration={500}
-            >{item}</Link>
-        </li>})
     return (
         <div className={activeMenu}>
             <div className={s.navAvatarBlock}>
@@ -31,10 +14,14 @@ function Nav(props) {
                 <span className={s.status}>Available for work</span>
             </div>
             <ul className={s.listItem}>
-                {element}
+                <li className={s.item}><a href='#'>Home</a></li>
+                <li className={s.item}><a href={"#mainBlock"}>About</a></li>
+                <li className={s.item}><a href={"#skillsBlock"}>Skills</a></li>
+                <li className={s.item}><a href={"#projectsBlock"}>Projects</a></li>
+                <li className={s.item}><a href={"#contactsBlock"}>Contacts</a></li>
             </ul>
         </div>
     );
 }
 
-export default Nav;
+export default Nav2;

@@ -1,21 +1,24 @@
 import React from "react";
-import s from './Contacts.module.css'
-import styleContainer from './../common/styles/Container.module.css'
+import s from './Contacts.module.scss'
+import styleContainer from '../common/styles/Container.module.scss'
+import Title from "../common/components/title/Title";
 
 
 function Contacts() {
     return (
-        <div className={s.contactsBlock}>
+        <div className={s.contactsBlock} id={'contacts'}>
             <div className={`${styleContainer.container} ${s.contactsContainer}`}>
-                <h2 className={s.title}>Contacts</h2>
+                <Title text={'Contacts'} description={'Feel free to contact me anytime'}/>
+                <div className={s.formContainer}>
+                    <form className={s.form} method="POST" target="_blank" id="data">
+                        <input className={`${s.itemForm} ${s.contactsName}`} placeholder={'Name'} required/>
+                        <input className={`${s.itemForm} ${s.contactsEmail}`} placeholder={'Email'} required/>
+                        <input className={`${s.itemForm} ${s.contactsSubject}`} placeholder={'Subject'} required/>
+                        <textarea className={`${s.itemForm} ${s.contactsMessage}`} placeholder={'Message'} required ></textarea>
+                        <button className={s.sendBtn} form="data" type="submit">Send message</button>
+                    </form>
 
-                <form className={s.form} method="POST" target="_blank" id="data">
-                    <input className={s.itemForm} placeholder={'input'} required/>
-                    <input className={s.itemForm} placeholder={'input'} required/>
-                    <textarea className={s.itemForm} placeholder={'textarea'} required ></textarea>
-                </form>
-                <button className={s.sendBtn} form="data" type="submit">send</button>
-
+                </div>
             </div>
         </div>
     )

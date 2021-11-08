@@ -1,0 +1,15 @@
+.projectsBlock {
+    padding: 85px 40px;
+    .projectsContainer {
+        justify-content: flex-start;
+        .projects {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            flex-wrap: wrap;
+            @media all and (max-width: 1065px) {
+                justify-content: center;
+            }
+        }
+    }
+}

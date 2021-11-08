@@ -1,0 +1,26 @@
+@import '../../styles/sass/variables';
+
+.title {
+  margin-bottom: 33px;
+  position: relative;
+  padding: 0 15px;
+
+
+  h2 {
+    font-size: 40px;
+    font-weight: 800;
+    color: $titleColor;
+    letter-spacing: -.25px;
+    line-height: 100%;
+    margin-bottom: 12px;
+    @media all and (max-width: 575px) {
+      font-size: 34px;
+    }
+  }
+  span {
+    font-size: 15px;
+    @media all and (max-width: 575px) {
+      font-size: 14px;
+    }
+  }
+}

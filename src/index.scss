@@ -1,0 +1,20 @@
+@import './common/styles/sass/variables';
+
+body {
+  font-family: $fontFamily;
+  background-color: $bgColor;
+  color: $textColor;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.95;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}

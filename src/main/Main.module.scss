@@ -1,0 +1,172 @@
+@import '../common/styles/sass/variables';
+
+.mainBlock {
+    background-color: #fff;
+    padding: 85px 40px;
+
+    .mainContainer {
+    }
+}
+
+.aboutBlock {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "p c";
+    grid-gap: 30px;
+    align-items: center;
+    @media all and (max-width: 1200px) {
+        grid-gap: 0px;
+    }
+    @media all and (max-width: 991px) {
+        grid-template-columns: 1fr;
+        grid-template-rows: 2fr 3fr;
+        grid-template-areas:
+                "p"
+                "c";
+        grid-gap: 30px;
+    }
+    @media all and (max-width: 767px) {
+        grid-template-rows: 200px 2fr;
+    }
+}
+
+.photo {
+    grid-area: p;
+    width: 100%;
+    height: 100%;
+    padding: 0 15px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+
+.photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border: 1px solid rgba(0, 0, 0, 0.18);
+    border-radius: 5px;
+    padding: 4px;
+    @media all and (max-width: 991px) {
+        width: 250px;
+        height: 250px;
+        border-radius: 50%;
+    }
+    @media all and (max-width: 767px) {
+        width: 200px;
+        height: 200px;
+    }
+}
+
+.content {
+    grid-area: c;
+    padding: 0 15px;
+}
+
+.contentSubtitle {
+    color: $primaryColor;
+    font-size: 22px;
+    margin-bottom: 8px;
+    font-weight: 500;
+    line-height: 1.2;
+    @media all and (max-width: 1200px) {
+        display: none;
+    }
+    @media all and (max-width: 991px) {
+      display: block;
+    }
+    @media all and (max-width: 575px) {
+        font-size: 17px;
+    }
+}
+
+.contentTitle {
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1.5;
+    margin-bottom: 15px;
+    color: $titleColor;
+    @media all and (max-width: 575px) {
+        font-size: 22px;
+    }
+}
+
+.contentDescription {
+    font-size: 15px;
+    > p {
+        border-bottom: 2px solid rgba(0, 0, 0, .08);
+        padding-bottom: 27px;
+    }
+    @media all and (max-width: 575px) {
+        font-size: 14px;
+    }
+}
+
+
+.contentInfo {
+    display: grid;
+    grid-template-rows: repeat(2, 29px);
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+                    "name email"
+                    "age from";
+    grid-gap: 10px;
+    font-size: 15px;
+    margin-bottom: 4px;
+    padding: 27px 0;
+    @media all and (max-width: 520px) {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, 29px);
+        grid-template-areas:
+                    "name"
+                    "email"
+                    "age"
+                    "from";
+    }
+}
+
+.item {
+    display: flex;
+}
+
+.item span {
+    color: #333;
+    font-weight: 600;
+    margin-right: 10px;
+}
+
+.infoName {
+    grid-area: name;
+}
+
+.infoEmail {
+    grid-area: email;
+    a {
+        color:$primaryColor;
+        text-decoration: none;
+    }
+}
+
+.infoAge {
+    grid-area: age;
+}
+
+.infoFrom{
+    grid-area: from;
+}
+
+.contentBtn {
+    background-color: $primaryColor;
+    border: 1px solid $primaryColor;
+    color: #fff;
+    font-size: 14px;
+    padding: 10px 38px;
+    border-radius: 30px;
+    text-decoration: none;
+}
+
+
+
+

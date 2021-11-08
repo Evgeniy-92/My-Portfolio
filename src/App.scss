@@ -1,0 +1,10 @@
+.App {
+}
+
+.app-wrapper {
+    padding-left: 235px;
+    position: relative;
+    @media all and (max-width: 991px) {
+        padding-left: 0;
+    }
+}
