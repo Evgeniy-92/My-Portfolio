@@ -5,7 +5,7 @@ import Project from './project/Project';
 import Title from '../common/components/title/Title';
 import socialImage from '../assets/images/social.jpg'
 import todolistImage from '../assets/images/to-do-list.jpg'
-import counter from './../assets/images/counter.jpg'
+import counter from './../assets/images/unnamed.jpg'
 
 
 
