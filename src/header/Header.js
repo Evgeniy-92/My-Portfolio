@@ -7,9 +7,12 @@ function Header() {
     const show = () => {
         setStatus(!status)
     }
+    const hide = () => {
+        setStatus(false)
+    }
     return (
         <div className={s.header}>
-            <button onClick={show} className={s.headerBtn}>Menu</button>
+            <button onClick={show} onBlur={hide} className={s.headerBtn}>Menu</button>
             <Nav status={status}/>
         </div>
     );
