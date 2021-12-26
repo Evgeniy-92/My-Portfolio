@@ -81,7 +81,7 @@
             font-size: 15px;
           }
 
-          :first-child::after {
+          &:first-child::after {
             color: #333;
             content: '/';
             display: inline-block;
