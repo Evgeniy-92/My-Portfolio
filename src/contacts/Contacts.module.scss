@@ -68,6 +68,9 @@
           font-family: $fontFamily;
           font-size: 14px;
           margin-top: 10px;
+          &:hover {
+            cursor: pointer;
+          }
         }
 
         .itemForm {

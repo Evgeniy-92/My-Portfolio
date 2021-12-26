@@ -28,9 +28,7 @@ function About() {
                                 </div>
                                 <div className={`${s.item} ${s.infoEmail}`}>
                                     <span>Email:</span>
-                                    <p>
-                                        <a href="#">ev.drozd.2020@gmail.com</a>
-                                    </p>
+                                    <p>ev.drozd.2020@gmail.com</p>
                                 </div>
                                 <div className={`${s.item} ${s.infoAge}`}>
                                     <span>Age:</span>
