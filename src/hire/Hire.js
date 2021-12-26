@@ -9,7 +9,7 @@ function Hire() {
         backgroundImage: `url(${hireBG})`
     }
     return (
-        <div style={hire} className={s.hireBlock}>
+        <div style={hire} className={s.hireBlock} id={'hire me'}>
             <div className={`${styleContainer.container} ${s.containerHire}`}>
                 <div className={s.content}>
                     <h2 className={s.hireTitle}>Let's work together!</h2>

@@ -13,8 +13,8 @@ function Project(props) {
                 <div className={s.linksView}>
                     <span>Links:</span>
                     <ul className={s.listItem}>
-                        <li className={s.item}><a href="#">View demo</a></li>
-                        <li className={s.item}><a href="#">View code</a></li>
+                        <li className={s.item}><a target='_blank' href={props.roadPages}>View demo</a></li>
+                        <li className={s.item}><a target='_blank' href={props.roadCode}>View code</a></li>
                     </ul>
                 </div>
             </div>

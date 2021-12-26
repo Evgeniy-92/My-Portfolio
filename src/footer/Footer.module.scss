@@ -8,24 +8,27 @@
     flex-direction: column;
 }
 
-.footerContainer span {
-    background-color: #d9d2d2;
-}
-
-.title {
-    background-color: #d9d2d2;
-}
 
 .element {
-    width: 80px;
-    height: 80px;
-    background-color: #6da8c9;
+    width: 96px;
+    height: 96px;
+    border-radius: 50%;
+    overflow: hidden;
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+
 }
 
 .elementsContainer {
     display: flex;
     justify-content: space-between;
     width: 560px;
+    margin-bottom: 100px;
+    margin-top: 100px;
 }
 
 @media all and (max-width: 887px) {
@@ -37,4 +40,9 @@
         width: 60px;
         height: 60px;
     }
+}
+
+.copyright {
+    background-color: #111;
+    color: #f3f3f3;
 }

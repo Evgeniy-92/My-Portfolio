@@ -1,7 +1,7 @@
 import React from "react";
 import './App.scss';
 import Header from "./header/Header";
-import Main from "./main/Main";
+import About from "./about/About";
 import Skills from "./skills/Skills";
 import Projects from "./works/Projects";
 import Contacts from "./contacts/Contacts";
@@ -14,7 +14,7 @@ function App() {
         <div className="App">
             <Header/>
             <div className="app-wrapper">
-                <Main/>
+                <About/>
                 <Skills/>
                 <Hire/>
                 <Projects/>

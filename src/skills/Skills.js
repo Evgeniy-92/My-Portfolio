@@ -4,15 +4,16 @@ import styleContainer from '../common/styles/Container.module.scss'
 import Skill from "./skill/Skill";
 import Title from "../common/components/title/Title";
 import {
-    faHtml5,
-    faCss3Alt,
-    faReact,
-    faJs,
+    faAsymmetrik,
     faBattleNet,
+    faCss3Alt,
     faDashcube,
-    faWpforms, faAsymmetrik, faGit
+    faGit,
+    faHtml5,
+    faJs,
+    faReact
 } from "@fortawesome/free-brands-svg-icons";
-import {faFillDrip, faListAlt} from "@fortawesome/free-solid-svg-icons";
+import {faListAlt} from "@fortawesome/free-solid-svg-icons";
 
 function Skills() {
     return (

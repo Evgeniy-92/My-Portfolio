@@ -6,9 +6,8 @@ import {Link} from "react-scroll";
 function Nav(props) {
     const activeMenu = props.status ? `${s.nav} ${s.active}` : s.nav
 
-    const items = ['about', 'skills', 'projects', 'contacts']
+    const items = ['about', 'skills', 'hire me', 'projects', 'contacts']
     const element = items.map((item, index) => {
-        debugger
        return <li className={s.item}>
             <Link
                 key={index}
@@ -17,7 +16,7 @@ function Nav(props) {
                 to={item}
                 spy={true}
                 smooth={true}
-                offset={10}
+                offset={0}
                 duration={500}
             >{item}</Link>
         </li>})

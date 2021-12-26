@@ -1,10 +1,10 @@
 import React from "react";
-import s from './Main.module.scss'
+import s from './About.module.scss'
 import styleContainer from '../common/styles/Container.module.scss'
 import Title from "../common/components/title/Title";
 import avatarMain from './../assets/images/profile-avatar.jpg'
 
-function Main() {
+function About() {
     return (
         <div className={s.mainBlock} id={'about'}>
             <div className={`${styleContainer.container} ${s.mainContainer}`}>
@@ -18,10 +18,8 @@ function Main() {
                         <h2 className={s.contentTitle}>I'm Evgeniy Drozd, a Front-end developer (React + Redux)</h2>
                         <div className={s.contentDescription}>
                             <p>
-                                I am a result-oriented developer with experience in creating Landing Pages and SPA using React(JS/TS), Redux, HTML & CSS.
-                                I am now improving my skills in this area and expanding them with new technologies.
-                                My free time is dedicated to solving the Codewars problem.
-                                I consider project proposals/full-time in creative company with current tasks and friendly team!
+                                I’m a frontend developer who has a results-focused attitude tocreating SPA,using React(JS/TS), Redux.
+                                My free time is dedicated to Codewars, improve my English,programming tutorials. Ready to consider project work and full-time employment.
                             </p>
                             <div className={s.contentInfo}>
                                 <div className={`${s.item} ${s.infoName}`}>
@@ -43,7 +41,6 @@ function Main() {
                                     <p>Minsk, Belarus</p>
                                 </div>
                             </div>
-                            <a href="#" className={s.contentBtn}>Donload CV</a>
                         </div>
                     </div>
                 </div>
@@ -53,4 +50,4 @@ function Main() {
     );
 }
 
-export default Main;
+export default About;

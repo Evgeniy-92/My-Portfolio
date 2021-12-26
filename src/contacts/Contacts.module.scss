@@ -38,14 +38,17 @@
 
         .contactsName {
           grid-area: name;
+          font-family: $fontFamily;
         }
 
         .contactsEmail {
           grid-area: email;
+          font-family: $fontFamily;
         }
 
         .contactsSubject {
           grid-area: subject;
+          font-family: $fontFamily;
         }
 
         .contactsMessage {
