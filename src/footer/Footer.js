@@ -11,6 +11,7 @@ function Footer() {
     return (
         <div className={s.footerBlock}>
             <div className={`${styleContainer.container} ${s.footerContainer}`}>
+                <h2 className={s.name}>Evgeniy Drozd</h2>
                 <div className={s.elementsContainer}>
                     <div className={s.element}>
                         <a href={'https://t.me/evgen_drozd'} target='_blank'>

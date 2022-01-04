@@ -4,6 +4,7 @@
   background-color: $bgSecondColor;
   padding: 85px 40px;
 
+
   .contactsContainer {
     //justify-content: flex-start;
 
@@ -15,22 +16,28 @@
 
       .form {
         display: grid;
-        grid-template-rows: 41px 128px 53px;
+        grid-template-rows: 41px 15px 141px 15px 53px;
         grid-template-columns: 1fr 1fr;
         grid-template-areas:
                     "name email "
+                    "errorName errorEmail"
                     "message message "
+                    "errorMessage errorMessage"
                     "btn btn";
-        grid-gap: 15px;
+        grid-gap: 5px;
         width: 100%;
         padding: 0 15px;
         @media all and (max-width: 775px) {
+          grid-gap: 1px;
           grid-template-columns: 1fr;
-          grid-template-rows: 41px 41px 128px 53px;
+          grid-template-rows: 41px 15px 41px 15px 128px 15px 53px;
           grid-template-areas:
                     "name"
+                    "errorName"
                     "email"
+                    "errorEmail"
                     "message "
+                    "errorMessage"
                     "btn";
         }
 
@@ -50,12 +57,27 @@
           font-family: $fontFamily;
         }
 
+        .errorName {
+          grid-area: errorName;
+        }
+        .errorEmail {
+          grid-area: errorEmail;
+        }
+        .errorMessage {
+          grid-area: errorMessage;
+        }
+        .error {
+          color: #CB6253;
+          line-height: 1;
+          font-size: 13px;
+        }
+
         .sendBtn {
           grid-area: btn;
-          width: 156px;
+          width: 158px;
           padding: 10px 30px;
-          background-color: $primaryColor !important;
-          border: 1px solid $primaryColor !important;
+          background-color: $primaryColor;
+          border: 2px solid $primaryColor;
           border-radius: 30px;
           color: #fff;
           font-family: $fontFamily;
@@ -63,6 +85,10 @@
           margin-top: 10px;
           &:hover {
             cursor: pointer;
+          }
+          &:disabled {
+            background: #fff;
+            color: #CB6253;
           }
         }
 
