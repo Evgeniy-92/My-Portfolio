@@ -3,7 +3,13 @@ import s from './Contacts.module.scss'
 import styleContainer from '../common/styles/Container.module.scss'
 import Title from "../common/components/title/Title";
 import { useFormik } from 'formik';
+import axios from "axios";
 
+const formAPI = {
+    post: (name, email, message) => {
+        return axios.post('http://localhost:3010/sendMessage', {name, email, message})
+    }
+}
 
 function Contacts() {
     const formik = useFormik({
@@ -14,7 +20,10 @@ function Contacts() {
             message: '',
         },
         onSubmit: values => {
-            console.log(JSON.stringify(values, null, 2));
+            formAPI.post(values.name, values.email, values.message)
+                .then(res => {
+                    console.log(res)
+                })
         },
     });
     return (
@@ -38,12 +47,12 @@ function Contacts() {
                             {...formik.getFieldProps('email')}
                         />
 
-                        <input
-                            className={`${s.itemForm} ${s.contactsSubject}`}
-                            type='text'
-                            placeholder='Subject'
-                            {...formik.getFieldProps('subject')}
-                        />
+                        {/*<input*/}
+                        {/*    className={`${s.itemForm} ${s.contactsSubject}`}*/}
+                        {/*    type='text'*/}
+                        {/*    placeholder='Subject'*/}
+                        {/*    {...formik.getFieldProps('subject')}*/}
+                        {/*/>*/}
 
                         <textarea
                             className={`${s.itemForm} ${s.contactsMessage}`}

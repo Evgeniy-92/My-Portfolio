@@ -15,11 +15,10 @@
 
       .form {
         display: grid;
-        grid-template-rows: 41px 41px 128px 53px;
+        grid-template-rows: 41px 128px 53px;
         grid-template-columns: 1fr 1fr;
         grid-template-areas:
                     "name email "
-                    "subject subject"
                     "message message "
                     "btn btn";
         grid-gap: 15px;
@@ -27,11 +26,10 @@
         padding: 0 15px;
         @media all and (max-width: 775px) {
           grid-template-columns: 1fr;
-          grid-template-rows: 41px 41px 41px 128px 53px;
+          grid-template-rows: 41px 41px 128px 53px;
           grid-template-areas:
                     "name"
                     "email"
-                    "subject"
                     "message "
                     "btn";
         }
@@ -43,11 +41,6 @@
 
         .contactsEmail {
           grid-area: email;
-          font-family: $fontFamily;
-        }
-
-        .contactsSubject {
-          grid-area: subject;
           font-family: $fontFamily;
         }
 
