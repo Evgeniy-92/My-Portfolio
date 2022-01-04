@@ -7,7 +7,7 @@ import axios from "axios";
 
 const formAPI = {
     post: (name, email, message) => {
-        return axios.post('http://localhost:3010/sendMessage', {name, email, message})
+        return axios.post('https://smtp-nodejs-server3.herokuapp.com/sendMessage', {name, email, message})
     }
 }
 
@@ -16,7 +16,6 @@ function Contacts() {
         initialValues: {
             name: '',
             email: '',
-            subject: '',
             message: '',
         },
         onSubmit: values => {
@@ -46,13 +45,6 @@ function Contacts() {
                             placeholder='Email'
                             {...formik.getFieldProps('email')}
                         />
-
-                        {/*<input*/}
-                        {/*    className={`${s.itemForm} ${s.contactsSubject}`}*/}
-                        {/*    type='text'*/}
-                        {/*    placeholder='Subject'*/}
-                        {/*    {...formik.getFieldProps('subject')}*/}
-                        {/*/>*/}
 
                         <textarea
                             className={`${s.itemForm} ${s.contactsMessage}`}
