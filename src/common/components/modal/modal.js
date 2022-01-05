@@ -13,8 +13,8 @@ const Modal = (props) => {
         dispatch(setOpenModal(false))
     }
     const text =
-        props.typeModal === 'ok' && 'Спасибо что написали мне, как будет время я вам отвечу' ||
-        props.typeModal === 'error' && 'Ошибка. Попробуйте ещё раз'
+        props.typeModal === 'ok' && 'Спасибо что написали мне, как будет время я вам отвечу.' ||
+        props.typeModal === 'error' && 'Ошибка. Попробуйте отправить сообщение ещё раз.'
 
     return (
         <div className={s.box} onClick={targetContainerExit}>
