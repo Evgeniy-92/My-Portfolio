@@ -13,7 +13,7 @@ const Modal = (props) => {
         dispatch(setOpenModal(false))
     }
     const text =
-        props.typeModal === 'ok' && 'Спасибо что написали мне, как будет время я вам отвечу.' ||
+        props.typeModal === 'ok' && 'Спасибо, что написали мне, я обязательно Вам отвечу.' ||
         props.typeModal === 'error' && 'Ошибка. Попробуйте отправить сообщение ещё раз.'
 
     return (
