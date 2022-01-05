@@ -13,6 +13,7 @@ import {useSelector} from "react-redux";
 
 function App() {
     const openModal = useSelector(state => state.app.openModal)
+    const typeModal = useSelector(state => state.app.typeModal)
     return (
         <div className="App">
             <Header/>
@@ -21,7 +22,7 @@ function App() {
                 <Skills/>
                 <Hire/>
                 <Projects/>
-                {openModal && <Modal/>}
+                {openModal && <Modal typeModal={typeModal}/>}
                 <Contacts/>
                 <Footer/>
             </div>

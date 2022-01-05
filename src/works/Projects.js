@@ -6,6 +6,7 @@ import Title from '../common/components/title/Title';
 import socialImage from '../assets/images/social.jpg'
 import todolistImage from '../assets/images/to-do-list.jpg'
 import counter from './../assets/images/unnamed.jpg'
+import cards from './../assets/images/cards.png'
 
 
 
@@ -33,6 +34,12 @@ function Projects() {
                         src={counter}
                         projectTitle={'Counter'}
                         description={'Just a counter.'}/>
+                    <Project
+                        roadPages={'https://evgeniy-92.github.io/cards-2-0/'}
+                        roadCode={'https://github.com/Evgeniy-92/cards-2-0'}
+                        src={cards}
+                        projectTitle={'Cards'}
+                        description={'Study cards.'}/>
                 </div>
             </div>
         </div>

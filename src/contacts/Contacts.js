@@ -2,18 +2,13 @@ import React from "react";
 import s from './Contacts.module.scss'
 import styleContainer from '../common/styles/Container.module.scss'
 import Title from "../common/components/title/Title";
-import { useFormik } from 'formik';
+import {useFormik} from 'formik';
 import {useDispatch, useSelector} from "react-redux";
-import {sendForm, setIsSent} from "../appReducer";
-import Modal from "../common/components/modal/modal";
-
-
+import {sendForm} from "../appReducer";
 
 
 function Contacts() {
     const dispatch = useDispatch()
-    const isSent = useSelector(state => state.app.isSent)
-    const openModal = useSelector(state => state.app.openModal)
     const isDisabled = useSelector(state => state.app.isDisabled)
 
     const formik = useFormik({
@@ -51,7 +46,6 @@ function Contacts() {
 
     return (
         <div className={s.contactsBlock} id={'contacts'}>
-            {/*{openModal && <Modal/>}*/}
             <div className={`${styleContainer.container} ${s.contactsContainer}`}>
 
                 <Title text={'Contacts'} description={'Feel free to contact me anytime'}/>

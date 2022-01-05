@@ -2,9 +2,10 @@ import {formAPI} from "./app-api";
 
 
 const initialState = {
-    isSent: false,
     isDisabled: false,
     openModal: false,
+    setError: false,
+    typeModal: 'ok' || 'error'
 }
 
 export const appReducer = (state = initialState, action) => {
@@ -18,6 +19,16 @@ export const appReducer = (state = initialState, action) => {
             return {
                 ...state,
                 openModal: action.value
+            }
+        case 'SET-ERROR':
+            return {
+                ...state,
+                setError: action.value
+            }
+        case 'SET-TYPE-MODAL':
+            return {
+                ...state,
+                typeModal: action.value
             }
         default:
             return state
@@ -37,6 +48,18 @@ export const setOpenModal = (value) => {
         value
     }
 }
+export const setError = (value) => {
+    return {
+        type: 'SET-ERROR',
+        value
+    }
+}
+export const setTypeModal = (value) => {
+    return {
+        type: 'SET-TYPE-MODAL',
+        value
+    }
+}
 
 // thunk
 export const sendForm = (name, email, message) => (dispatch) => {
@@ -44,6 +67,11 @@ export const sendForm = (name, email, message) => (dispatch) => {
     formAPI.post(name, email, message)
         .then(res => {
             dispatch(setIsDisabled(false))
+            dispatch(setTypeModal('ok'))
+            dispatch(setOpenModal(true))
+        })
+        .catch(err => {
+            dispatch(setTypeModal('error'))
             dispatch(setOpenModal(true))
         })
 

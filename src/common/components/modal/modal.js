@@ -5,20 +5,23 @@ import {useDispatch} from "react-redux";
 
 
 
-const Modal = () => {
+const Modal = (props) => {
     const dispatch = useDispatch()
     
     const targetContainerExit = (e) => {
         if (e.target.closest('#modal') !== null) return
         dispatch(setOpenModal(false))
     }
+    const text =
+        props.typeModal === 'ok' && 'Спасибо что написали мне, как будет время я вам отвечу' ||
+        props.typeModal === 'error' && 'Ошибка. Попробуйте ещё раз'
+
     return (
         <div className={s.box} onClick={targetContainerExit}>
-            <div className={s.container}>
                 <div className={s.modal} id='modal'>
                     <div>
                         <p className={s.p}>
-                            Спасибо что написали мне, как будет время я вам отвечу
+                            {text}
                         </p>
                     </div>
 
@@ -31,7 +34,6 @@ const Modal = () => {
                         </button>
                     </div>
                 </div>
-            </div>
         </div>
     );
 }
