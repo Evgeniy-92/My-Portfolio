@@ -7,9 +7,12 @@ import Projects from "./works/Projects";
 import Contacts from "./contacts/Contacts";
 import Footer from "./footer/Footer";
 import Hire from "./hire/Hire";
+import Modal from "./common/components/modal/modal";
+import {useSelector} from "react-redux";
 
 
 function App() {
+    const openModal = useSelector(state => state.app.openModal)
     return (
         <div className="App">
             <Header/>
@@ -18,6 +21,7 @@ function App() {
                 <Skills/>
                 <Hire/>
                 <Projects/>
+                {openModal && <Modal/>}
                 <Contacts/>
                 <Footer/>
             </div>

@@ -3,20 +3,21 @@ import {formAPI} from "./app-api";
 
 const initialState = {
     isSent: false,
-    isDisabled: false
+    isDisabled: false,
+    openModal: false,
 }
 
 export const appReducer = (state = initialState, action) => {
     switch (action.type) {
-        case 'SET-IS-SENT':
-            return {
-                ...state,
-                isSent: action.value
-            }
         case 'SET-IS-DISABLED':
             return {
                 ...state,
                 isDisabled: action.value
+            }
+        case 'SET-OPEN-MODAL':
+            return {
+                ...state,
+                openModal: action.value
             }
         default:
             return state
@@ -24,15 +25,15 @@ export const appReducer = (state = initialState, action) => {
 }
 
 // action
-export const setIsSent = (value) => {
-    return {
-        type: 'SET-IS-SENT',
-        value
-    }
-}
 export const setIsDisabled = (value) => {
     return {
         type: 'SET-IS-DISABLED',
+        value
+    }
+}
+export const setOpenModal = (value) => {
+    return {
+        type: 'SET-OPEN-MODAL',
         value
     }
 }
@@ -42,7 +43,8 @@ export const sendForm = (name, email, message) => (dispatch) => {
     dispatch(setIsDisabled(true))
     formAPI.post(name, email, message)
         .then(res => {
-            dispatch(setIsSent(true))
             dispatch(setIsDisabled(false))
+            dispatch(setOpenModal(true))
         })
+
 }
