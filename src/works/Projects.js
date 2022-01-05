@@ -7,6 +7,7 @@ import socialImage from '../assets/images/social.jpg'
 import todolistImage from '../assets/images/to-do-list.jpg'
 import counter from './../assets/images/unnamed.jpg'
 import cards from './../assets/images/cards.png'
+import travel from './../assets/images/time-to-travel.jpg'
 
 
 
@@ -16,18 +17,24 @@ function Projects() {
             <div className={`${styleContainer.container} ${s.projectsContainer}`}>
                 <Title text={'Projects'} description={'Here are some of my projects'}/>
                 <div className={s.projects}>
+                    {/*<Project*/}
+                    {/*    roadPages={''}*/}
+                    {/*    roadCode={''}*/}
+                    {/*    src={socialImage}*/}
+                    {/*    projectTitle={'Social network'}*/}
+                    {/*    description={'My social network is an opportunity to communicate with friends, listen to music, exchange photos and likes, as well as make new acquaintances.'}/>*/}
+                    {/*<Project*/}
+                    {/*    road={''}*/}
+                    {/*    roadCode={''}*/}
+                    {/*    src={todolistImage}*/}
+                    {/*    projectTitle={'To do list'}*/}
+                    {/*    description={'My todo list will help you not to forget about your business.'}/>*/}
                     <Project
-                        roadPages={''}
-                        roadCode={''}
-                        src={socialImage}
-                        projectTitle={'Social network'}
-                        description={'My social network is an opportunity to communicate with friends, listen to music, exchange photos and likes, as well as make new acquaintances.'}/>
-                    <Project
-                        road={''}
-                        roadCode={''}
-                        src={todolistImage}
-                        projectTitle={'To do list'}
-                        description={'My todo list will help you not to forget about your business.'}/>
+                        roadPages={'https://evgeniy-92.github.io/cards-2-0/'}
+                        roadCode={'https://github.com/Evgeniy-92/cards-2-0'}
+                        src={cards}
+                        projectTitle={'Cards'}
+                        description={'Study cards.'}/>
                     <Project
                         roadPages={'https://evgeniy-92.github.io/Counter/'}
                         roadCode={'https://github.com/Evgeniy-92/Counter'}
@@ -35,11 +42,11 @@ function Projects() {
                         projectTitle={'Counter'}
                         description={'Just a counter.'}/>
                     <Project
-                        roadPages={'https://evgeniy-92.github.io/cards-2-0/'}
-                        roadCode={'https://github.com/Evgeniy-92/cards-2-0'}
-                        src={cards}
-                        projectTitle={'Cards'}
-                        description={'Study cards.'}/>
+                        roadPages={'https://evgeniy-92.github.io/Traveling/app/'}
+                        roadCode={'https://github.com/Evgeniy-92/Traveling'}
+                        src={travel}
+                        projectTitle={'Traveling'}
+                        description={'Travel lending.'}/>
                 </div>
             </div>
         </div>
