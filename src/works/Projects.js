@@ -23,12 +23,12 @@ function Projects() {
                     {/*    src={socialImage}*/}
                     {/*    projectTitle={'Social network'}*/}
                     {/*    description={'My social network is an opportunity to communicate with friends, listen to music, exchange photos and likes, as well as make new acquaintances.'}/>*/}
-                    {/*<Project*/}
-                    {/*    road={''}*/}
-                    {/*    roadCode={''}*/}
-                    {/*    src={todolistImage}*/}
-                    {/*    projectTitle={'To do list'}*/}
-                    {/*    description={'My todo list will help you not to forget about your business.'}/>*/}
+                    <Project
+                        roadPages={'https://evgeniy-92.github.io/React-TS-Todolist/'}
+                        roadCode={'https://github.com/Evgeniy-92/React-TS-Todolist'}
+                        src={todolistImage}
+                        projectTitle={'To do list'}
+                        description={'My todo list will help you not to forget about your business.'}/>
                     <Project
                         roadPages={'https://evgeniy-92.github.io/cards-2-0/'}
                         roadCode={'https://github.com/Evgeniy-92/cards-2-0'}
